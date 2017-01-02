@@ -43,7 +43,7 @@ def parse_authorized_response(resp):
     print(type(resp))
     print(resp)
     if resp is None:
-        return 'Access denied: reason=%s error=%s' % (
+        return 'Access denied: reason={0!s} error={1!s}'.format(
             request.args['error_reason'],
             request.args['error_description']
         )
